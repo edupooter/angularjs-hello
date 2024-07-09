@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloWorldApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World with AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script>
+    // Define the AngularJS application
+    var app = angular.module('helloWorldApp', [])
+
+    // Define a controller for the application
+      app.controller('HelloWorldController', function ($scope) {
+      $scope.message = "Hello World"
+      $scope.app = {
+        name: "My AngularJS App",
+        version: "1.0"
+      };
+    });
+  </script>
+</head>
+
+<body ng-controller="HelloWorldController">
+  <h1>{{ message }}</h1>
+  <p>App Name: {{ app.name }}</p>
+  <p>App Version: {{ app.version }}</p>
+</body>
+
+</html>
